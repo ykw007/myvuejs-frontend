@@ -22,7 +22,7 @@
           "label": "Password",
           "required": "Password is required"
         },
-        "submit": "Sign in",
+        "submit": "로그인",
         "noAccountYet": "Don't have an account yet?",
         "signUpHere": "Sign up here",
         "forgotPassword": "Forgot your password?"
@@ -52,11 +52,11 @@
         "submit": "Create account",
         "terms": {
           "accept": "By clicking “Create account”, you agree to our {termsOfService} and {privacyPolicy}.",
-          "termsOfService": "terms of service",
-          "privacyPolicy": "privacy policy"
+          "termsOfService": "이용약관",
+          "privacyPolicy": "개인정보처리방침"
         },
         "alreadyHaveAccount": "Already have an account?",
-        "signIn": "Sign in"
+        "signIn": "로그인"
       }
     },
     "homePage": {
@@ -65,9 +65,9 @@
       "createNewTeam": "Create New Team"
     },
     "pageFooter": {
-      "about": "About",
-      "termOfService": "Terms of Service",
-      "privacyPolicy": "Privacy Policy"
+      "about": "회사소개",
+      "termOfService": "이용약관",
+      "privacyPolicy": "개인정보처리방침"
     },
     "error": {
       "request": {
