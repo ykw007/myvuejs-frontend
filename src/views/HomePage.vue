@@ -35,6 +35,10 @@
         <button class="btn btn-link" @click="createTeam()">+ {{ $t('homePage.createNewTeam') }}</button>
       </div>
     </div>
+    <CreateBoardModal
+      :teamId="selectedTeamId"
+      @created="onBoardCreated" />
+    <CreateTeamModal />
   </div>
 </template>
 
