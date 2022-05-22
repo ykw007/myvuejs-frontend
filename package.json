@@ -11,17 +11,24 @@
     "test": "npm run test:unit && npm run test:e2e"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/vue-fontawesome": "^2.0.6",
     "@vue/component-compiler-utils": "^3.3.0",
     "axios": "^0.27.2",
     "bootstrap": "^4.6.1",
+    "dotenv": "^16.0.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "vue": "^2.5.17",
+    "vue-i18n": "^8.27.1",
     "vue-router": "^3.0.1",
     "vuelidate": "^0.7.7",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^4.0.0",
+    "@types/vue-i18n": "^7.0.0",
     "@types/vuelidate": "^0.7.15",
     "@vue/cli-plugin-babel": "^3.0.1",
     "@vue/cli-plugin-e2e-nightwatch": "^3.0.1",

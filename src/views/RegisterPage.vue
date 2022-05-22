@@ -9,7 +9,7 @@
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" v-model="form.username">
             <div class="field-error" v-if="$v.form.username.$dirty">
-              <div class="error" v-if="!$v.form.username.required">Username is required</div>
+              <div class="error" v-if="!$v.form.username.required">{{ $t('registerPage.form.username.required') }}</div>
               <div class="error" v-if="!$v.form.username.alphaNum">Username can only contain letters and numbers</div>
               <div class="error" v-if="!$v.form.username.minLength">Username must have at least {{$v.form.username.$params.minLength.min}} letters.</div>
               <div class="error" v-if="!$v.form.username.maxLength">Username is too long. It can contains maximium {{$v.form.username.$params.maxLength.max}} letters.</div>
