@@ -8,13 +8,35 @@
 import 'bootstrap/dist/js/bootstrap.min'
 
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    this.$bus.$on('myDataFetched', myData => {
+      // Initializing the real time connection
+      this.$rt.init(myData.settings.realTimeServerUrl, myData.user.token)
+    })
+
+    this.$bus.$on('user.unauthenticated', () => {
+      this.$router.push({name: 'login'})
+    })
+  }
 }
 </script>
 
 <style lang="scss">
-html {
+html, body {
+  height: 100%;
   font-size: 14px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+
+#app, .page {
+  height: 100%;
+  position: relative;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
 }
 
 .public.container {
@@ -24,6 +46,10 @@ html {
 input.form-control:focus,
 textarea.form-control:focus {
   border: 1px solid #377EF6 !important;
+}
+
+.btn-cancel {
+  color: #666 !important;
 }
 
 .public {
@@ -39,7 +65,7 @@ textarea.form-control:focus {
 
       .error {
         line-height: 1;
-        //display: none;
+        display: none;
         margin-top: 5px;
       }
     }
@@ -68,6 +94,10 @@ textarea.form-control:focus {
       .modal-title {
         font-size: 1rem;
       }
+
+      .close {
+        outline: none !important;
+      }
     }
 
     .modal-body {
@@ -90,5 +120,9 @@ textarea.form-control:focus {
       }
     }
   }
+}
+
+.modal-open .modal-backdrop.show {
+    opacity: .7;
 }
 </style>

@@ -5,9 +5,14 @@ import store from './store'
 import axios from 'axios'
 import Vuelidate from 'vuelidate'
 import { library as faLibrary } from '@fortawesome/fontawesome-svg-core'
-import { faHome, faSearch, faPlus } from '@fortawesome/free-solid-svg-icons'
+import {
+  faHome, faSearch, faPlus, faEllipsisH, faUserPlus, faListUl, faWindowMaximize,
+  faUser, faPaperclip, faArchive, faPencilAlt, faComment, faUndo, faTrashAlt, faSpinner
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { i18n } from './i18n'
+import eventBus from './event-bus'
+import realTimeClient from '@/real-time-client'
 
 // Bootstrap axios
 axios.defaults.baseURL = '/api'
@@ -19,13 +24,18 @@ axios.interceptors.response.use(
   }
 )
 
+// Enable Vuelidate
 Vue.use(Vuelidate)
 
 // Set up FontAwesome
-faLibrary.add(faHome, faSearch, faPlus)
+faLibrary.add(faHome, faSearch, faPlus, faEllipsisH, faUserPlus, faListUl, faWindowMaximize,
+  faUser, faPaperclip, faArchive, faPencilAlt, faComment, faUndo, faTrashAlt, faSpinner)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
+
+Vue.prototype.$bus = eventBus
+Vue.prototype.$rt = realTimeClient
 
 new Vue({
   router,
