@@ -120,14 +120,14 @@ class RealTimeClient {
     } else {
       if (this.triedAttemps > 30) {
         console.log('[RealTimeClient] Fail to connect to the server')
-        return;
+        return
       }
       // Temporarily disconnected, attempt reconnect
       console.log('[RealTimeClient] Disconnected')
       globalBus.$emit('RealTimeClient.disconnected')
 
       setTimeout(() => {
-        this.triedAttemps ++
+        this.triedAttemps++
         console.log('[RealTimeClient] Reconnecting')
         globalBus.$emit('RealTimeClient.reconnecting')
         this.connect()

@@ -65,7 +65,7 @@ textarea.form-control:focus {
 
       .error {
         line-height: 1;
-        display: none;
+        //display: none;
         margin-top: 5px;
       }
     }
