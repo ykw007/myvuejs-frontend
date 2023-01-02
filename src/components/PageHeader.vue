@@ -1,8 +1,8 @@
 <template>
   <div class="page-header d-flex align-content-center">
     <div class="logo" @click="goHome()">
-      <font-awesome-icon icon="home" class="home-icon" />
-      <img src="/images/logo.png">
+      <!-- <font-awesome-icon icon="home" class="home-icon" /> -->
+      <img src="/images/logo_small.png">
     </div>
     <div class="boards-menu-toggle">
       <div class="dropdown">
@@ -107,7 +107,7 @@ export default {
     img {
       margin-left: 5px;
       margin-top: 6px;
-      width: 80px;
+      width: 100%;
       // vertical-align: bottom;
     }
   }
