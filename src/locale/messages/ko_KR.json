@@ -46,14 +46,14 @@
         "firstName": {
           "label": "First name",
           "required": "First name은 필수항목입니다.",
-          "alpha": "First name can only contain letters",
+          "alpha": "First name은 영문자만 가능합니다.",
           "minLength": "First name must have at least {minLength} letters.",
           "maxLength": "First name is too long. It can contains maximum {maxLength} letters."
         },
         "lastName": {
           "label": "Last name",
           "required": "Last name은 필수항목입니다.",
-          "alpha": "Last name can only contain letters",
+          "alpha": "Last name은 영문자만 가능합니다.",
           "minLength": "Last name must have at least {minLength} letters.",
           "maxLength": "Last name is too long. It can contains maximum {maxLength} letters."
         },
