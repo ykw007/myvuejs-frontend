@@ -1,6 +1,6 @@
 {
     "logo": {
-      "tagLine": "Open source task management tool"
+      "tagLine": "Redbeach soft Vue 테스트 사이트입니다."
     },
     "header": {
       "boardsMenu": {
@@ -8,19 +8,19 @@
         "noBoard": "No board",
         "personalBoards": "Personal Boards"
       },
-      "search": "Search",
-      "profile": "Profile",
-      "signOut": "Sign Out"
+      "search": "검색",
+      "profile": "프로필",
+      "signOut": "로그아웃"
     },
     "loginPage": {
       "form": {
         "username": {
-          "label": "Username or email address",
-          "required": "Username or email address is required"
+          "label": "사용자ID 또는 이메일 주소",
+          "required": "사용자ID 또는 이메일 주소는 필수항목입니다."
         },
         "password": {
-          "label": "Password",
-          "required": "Password is required"
+          "label": "비밀번호",
+          "required": "비밀번호는 필수항목입니다."
         },
         "submit": "로그인",
         "noAccountYet": "Don't have an account yet?",
@@ -31,8 +31,8 @@
     "registerPage": {
       "form": {
         "username": {
-          "label": "Username",
-          "required": "사용자명은 필수항목입니다.",
+          "label": "사용자ID",
+          "required": "사용자ID은 필수항목입니다.",
           "alphaNum": "Username can only contain letters and numbers",
           "minLength": "Username must have at least {minLength} letters.",
           "maxLength": "Username is too long. It can contains maximium {maxLength} letters."

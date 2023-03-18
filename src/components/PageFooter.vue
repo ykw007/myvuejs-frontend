@@ -5,7 +5,7 @@
       <li class="list-inline-item"><a href="#">{{ $t("pageFooter.about") }}</a></li>
       <li class="list-inline-item"><a href="#">{{ $t("pageFooter.termOfService") }}</a></li>
       <li class="list-inline-item"><a href="#">{{ $t("pageFooter.privacyPolicy") }}</a></li>
-      <li class="list-inline-item"><a href="https://github.com/ykw007/" target="_blank">GitHub</a></li>
+      <!--<li class="list-inline-item"><a href="https://github.com/ykw007/" target="_blank">GitHub</a></li>-->
     </ul>
   </footer>
 </template>
