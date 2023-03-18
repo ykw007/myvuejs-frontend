@@ -24,7 +24,7 @@
         },
         "submit": "로그인",
         "noAccountYet": "Don't have an account yet?",
-        "signUpHere": "Sign up here",
+        "signUpHere": "회원가입",
         "forgotPassword": "Forgot your password?"
       }
     },
@@ -38,24 +38,24 @@
           "maxLength": "Username is too long. It can contains maximium {maxLength} letters."
         },
         "emailAddress": {
-          "label": "Email address",
+          "label": "이메일 주소",
           "required": "Email address is required",
           "email": "This is not a valid email address",
           "maxLength": "Email address is too long. It can contains maximium {maxLength} letters."
         },
         "password": {
-          "label": "Password",
+          "label": "비밀번호",
           "required": "Password is required",
           "minLength": "Password is too short. It can contains at least {minLength} letters.",
           "maxLength": "Password is too long. It can contains maximium {maxLength} letters."
         },
-        "submit": "Create account",
+        "submit": "계정생성",
         "terms": {
           "accept": "By clicking “Create account”, you agree to our {termsOfService} and {privacyPolicy}.",
           "termsOfService": "이용약관",
           "privacyPolicy": "개인정보처리방침"
         },
-        "alreadyHaveAccount": "Already have an account?",
+        "alreadyHaveAccount": "이미 계정을 가지고 있으신가요?",
         "signIn": "로그인"
       }
     },

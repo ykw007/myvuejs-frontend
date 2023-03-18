@@ -20,12 +20,10 @@
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-block">{{ $t("loginPage.form.submit") }}</button>
-          <!--
           <div class="links">
-            <p class="sign-up text-muted">{{ $t("loginPage.form.noAccountYet") }} <router-link to="register" class="link-sign-up">{{ $t("loginPage.form.signUpHere") }}</router-link></p>
-            <p><router-link to="#">{{ $t("loginPage.form.forgotPassword") }}</router-link></p>
+            <p class="sign-up text-muted"><!--{{ $t("loginPage.form.noAccountYet") }}--><router-link to="register" class="link-sign-up">{{ $t("loginPage.form.signUpHere") }}</router-link></p>
+            <!--<p><router-link to="#">{{ $t("loginPage.form.forgotPassword") }}</router-link></p>-->
           </div>
-          -->
         </form>
       </div>
     </div>
