@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <span class="copyright">&copy; 2020 RedBeach Soft</span>
+    <span class="copyright">&copy; 2020 RedBeach Soft by kw.yang</span>
     <ul class="footer-links list-inline float-right">
       <li class="list-inline-item"><a href="#">{{ $t("pageFooter.about") }}</a></li>
       <li class="list-inline-item"><a href="#">{{ $t("pageFooter.termOfService") }}</a></li>
