@@ -101,7 +101,7 @@ export default {
 <style lang="scss" scoped>
 .modal {
   .modal-dialog {
-    width: 400px;
+    width: 300px;
   }
 }
 </style>

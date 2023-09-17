@@ -7,9 +7,11 @@ export default {
    * Fetch current user's name, boards, and teams
    */
   getMyData () {
+    console.log('[me.js] getMyData!!')
     return new Promise((resolve, reject) => {
       axios.get('/me').then(({data}) => {
         resolve(data)
+        console.log('getMyData :' + data)
         eventBus.$emit('myDataFetched', data)
       }).catch((error) => {
         reject(errorParser.parse(error))

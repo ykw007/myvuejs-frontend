@@ -16,7 +16,7 @@
               <div class="member" v-for="member in members" v-bind:key="member.id">
                 <span>{{ member.shortName }}</span>
               </div>
-              <div class="member add-member-toggle" @click="openAddMember()">
+              <div v-if="user.adminYn=='Y'" class="member add-member-toggle" @click="openAddMember()">
                 <span><font-awesome-icon icon="user-plus" /></span>
               </div>
             </div>
@@ -49,7 +49,7 @@
                   <div class="add-card-button" v-show="!cardList.cardForm.open" @click="openAddCardForm(cardList)">+ Add a card</div>
                 </div>
               </div>
-              <div class="list-wrapper add-list">
+              <div v-if="user.adminYn=='Y'" class="list-wrapper add-list">
                 <div class="add-list-button" v-show="!addListForm.open" @click="openAddListForm()">+ Add a list</div>
                 <form @submit.prevent="addCardList()" v-show="addListForm.open" class="add-list-form">
                   <div class="form-group">
@@ -86,6 +86,7 @@ import notify from '@/utils/notify'
 import boardService from '@/services/boards'
 import cardListService from '@/services/card-lists'
 import cardService from '@/services/cards'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'BoardPage',
@@ -103,6 +104,9 @@ export default {
     }
   },
   computed: {
+    ...mapGetters([
+      'user'
+    ]),
     focusedCardList () {
       return this.cardLists.filter(cardList => cardList.id === this.openedCard.cardListId)[0] || {}
     }
@@ -141,7 +145,7 @@ export default {
     }
   },
   mounted () {
-    console.log('[BoardPage] Mouted')
+    console.log('>>>>[BoardPage] Mouted')
     this.loadInitial()
     this.$el.addEventListener('click', this.dismissActiveForms)
     // Closing card window will change back to board URL
@@ -155,6 +159,7 @@ export default {
   methods: {
     loadInitial () {
       // The board page can be opened through a card URL.
+      console.log('this.$route.params.cardId : ' + this.$route.params.cardId)
       if (this.$route.params.cardId) {
         console.log('[BoardPage] Opened with card URL')
         this.loadCard(this.$route.params.cardId).then(card => {

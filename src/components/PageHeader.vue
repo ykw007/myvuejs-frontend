@@ -2,7 +2,7 @@
   <div class="page-header d-flex align-content-center">
     <div class="logo" @click="goHome()">
       <!-- <font-awesome-icon icon="home" class="home-icon" /> -->
-      <img src="/images/logo_small.png">
+      <img src="/images/logo_small.jpg">
     </div>
     <div class="boards-menu-toggle">
       <div class="dropdown">
@@ -61,6 +61,7 @@ export default {
     ])
   },
   mounted () {
+    console.log('[PageHeader] mounted!!')
     if (!this.user.authenticated) {
       this.$store.dispatch('getMyData')
     }
@@ -124,7 +125,7 @@ export default {
 
   .search-box {
     .search-wrapper {
-      width: 300px;
+      width: 120px;
       margin: 0 auto;
       position: relative;
     }

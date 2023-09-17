@@ -10,7 +10,7 @@
             <h3>{{ board.name }}</h3>
             <p>{{ board.description }}</p>
           </div>
-          <div class="board add list-inline-item" @click="createBoard()">
+          <div v-if="user.adminYn=='Y'" class="board add list-inline-item" @click="createBoard()">
             <font-awesome-icon icon="plus" />
             <div>{{ $t('homePage.createNewBoard') }}</div>
           </div>
@@ -30,9 +30,11 @@
           </div>
         </div>
       </div>
-
-      <div class="create-team-wrapper">
+      <div class="create-team-wrapper" v-if="user.adminYn=='Y'">
         <button class="btn btn-link" @click="createTeam()">+ {{ $t('homePage.createNewTeam') }}</button>
+      </div>
+      <div class="create-team-wrapper" v-if="user.adminYn=='Y'">
+        <button class="btn btn-link" @click="createTeam()">+ Manager Team</button>
       </div>
     </div>
     <CreateBoardModal
@@ -58,6 +60,7 @@ export default {
   },
   computed: {
     ...mapGetters([
+      'user',
       'personalBoards',
       'teamBoards'
     ])

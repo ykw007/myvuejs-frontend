@@ -10,7 +10,9 @@ import 'bootstrap/dist/js/bootstrap.min'
 export default {
   name: 'App',
   created () {
+    console.log('[App] created!!')
     this.$bus.$on('myDataFetched', myData => {
+      console.log('[App] myDataFetched!! user' + myData)
       // Initializing the real time connection
       this.$rt.init(myData.settings.realTimeServerUrl, myData.user.token)
     })
