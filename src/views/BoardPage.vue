@@ -183,17 +183,6 @@ export default {
         })
       })
     },
-    loadFile (cardId) {
-      return new Promise(resolve => {
-        console.log('[BoardPage] Loading loadFile ' + cardId)
-        cardService.getCard(cardId).then(card => {
-          this.openedCard = card
-          resolve(card)
-        }).catch(error => {
-          notify.error(error.message)
-        })
-      })
-    },
     loadBoard (boardId) {
       return new Promise(resolve => {
         console.log('[BoardPage] Loading board ' + boardId)
