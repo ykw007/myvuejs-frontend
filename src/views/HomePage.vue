@@ -33,9 +33,6 @@
       <div class="create-team-wrapper" v-if="user.adminYn=='Y'">
         <button class="btn btn-link" @click="createTeam()">+ {{ $t('homePage.createNewTeam') }}</button>
       </div>
-      <div class="create-team-wrapper" v-if="user.adminYn=='Y'">
-        <button class="btn btn-link" @click="createTeam()">+ Manager Team</button>
-      </div>
     </div>
     <CreateBoardModal
       :teamId="selectedTeamId"
