@@ -14,7 +14,7 @@ export default {
     this.$bus.$on('myDataFetched', myData => {
       console.log('[App] myDataFetched!! user' + myData)
       // Initializing the real time connection
-      this.$rt.init(myData.settings.realTimeServerUrl, myData.user.token)
+      // this.$rt.init(myData.settings.realTimeServerUrl, myData.user.token)
     })
 
     this.$bus.$on('user.unauthenticated', () => {

@@ -371,10 +371,10 @@ export default {
       })
     },
     subscribeToRealTimUpdate (boardId) {
-      this.$rt.subscribe('/board/' + boardId, this.onRealTimeUpdated)
+      // this.$rt.subscribe('/board/' + boardId, this.onRealTimeUpdated)
     },
     unsubscribeFromRealTimeUpdate (boardId) {
-      this.$rt.unsubscribe('/board/' + boardId, this.onRealTimeUpdated)
+      // this.$rt.unsubscribe('/board/' + boardId, this.onRealTimeUpdated)
     },
     onRealTimeUpdated (update) {
       console.log('[BoardPage] Real time update received', update)

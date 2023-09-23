@@ -74,7 +74,7 @@ export default {
       this.$router.push({name: 'board', params: { boardId: board.id }})
     },
     signOut () {
-      this.$rt.logout()
+      // this.$rt.logout()
 
       meService.signOut().then(() => {
         this.$store.dispatch('logout')
