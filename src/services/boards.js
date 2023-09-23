@@ -41,14 +41,5 @@ export default {
         reject(errorParser.parse(error))
       })
     })
-  },
-  getFile (filepath) {
-    return new Promise((resolve, reject) => {
-      axios.get('/file/' + filepath).then(({data}) => {
-        resolve(data)
-      }).catch((error) => {
-        reject(errorParser.parse(error))
-      })
-    })
   }
 }
