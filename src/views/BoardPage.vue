@@ -32,7 +32,7 @@
                     animation: 0, scrollSensitivity: 100, touchStartThreshold: 20}"
                     v-bind:data-list-id="cardList.id">
                     <div class="card-item" v-for="card in cardList.cards" v-bind:key="card.id" @click="openCard(card)">
-                      <div class="cover-image" v-if="card.coverImage"><img :src="loadFile(card.id)" /></div>
+                      <div class="cover-image" v-if="card.coverImage"><img :src="card.coverImage" /></div>
                       <div class="card-title">{{ card.title }}</div>
                     </div>
                     <div class="add-card-form-wrapper" v-if="cardList.cardForm.open">
@@ -186,7 +186,7 @@ export default {
     loadFile (cardId) {
       return new Promise(resolve => {
         console.log('[BoardPage] Loading loadFile ' + cardId)
-        cardService.getFile(cardId).then(card => {
+        cardService.getCard(cardId).then(card => {
           this.openedCard = card
           resolve(card)
         }).catch(error => {
