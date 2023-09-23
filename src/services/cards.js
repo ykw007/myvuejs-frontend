@@ -33,6 +33,15 @@ export default {
       })
     })
   },
+  getFile (cardId) {
+    return new Promise((resolve, reject) => {
+      axios.get('/file/' + cardId).then(({data}) => {
+        resolve(data)
+      }).catch(error => {
+        reject(errorParser.parse(error))
+      })
+    })
+  },
   changeCardTitle (cardId, title) {
     return new Promise((resolve, reject) => {
       axios.put('/cards/' + cardId + '/title', {title}).then(({data}) => {
