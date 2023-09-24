@@ -185,7 +185,7 @@ export default {
     },
     loadFile (card) {
       return new Promise(resolve => {
-        console.log('[BoardPage] Loading card.id ' + card.id)
+        console.log('[BoardPage] loadFile card.id ' + card.id)
         cardService.getFile(card.id).then(card => {
           // this.openedCard = card
           resolve(card)
