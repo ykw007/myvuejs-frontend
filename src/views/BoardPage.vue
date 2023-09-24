@@ -185,8 +185,8 @@ export default {
     },
     loadFile (card) {
       return new Promise(resolve => {
-        console.log('[BoardPage] Loading card.id ' + card.id)
-        cardService.getFile(card.id).then(card => {
+        console.log('[BoardPage] Loading card.id ' + card.coverImage)
+        cardService.getFile(card.coverImage).then(card => {
           // this.openedCard = card
           resolve(card)
         }).catch(error => {

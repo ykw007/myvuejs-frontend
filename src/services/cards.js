@@ -33,9 +33,9 @@ export default {
       })
     })
   },
-  getFile (cardId) {
+  getFile (coverImage) {
     return new Promise((resolve, reject) => {
-      axios.get('/getfile/' + cardId).then(({data}) => {
+      axios.get('/getfile/' + coverImage).then(({data}) => {
         resolve(data)
       }).catch(error => {
         reject(errorParser.parse(error))
