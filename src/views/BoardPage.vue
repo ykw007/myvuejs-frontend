@@ -72,7 +72,8 @@
       :cardList="focusedCardList"
       :board="board"
       :members="members"
-      @coverImageChanged="updateCardCoverImage"/>
+      @coverImageChanged="updateCardCoverImage"
+      @titleChanged="updateCardTitleChanged"/>
   </div>
 </template>
 
@@ -431,6 +432,15 @@ export default {
         return card.id === change.cardId
       })
       card.coverImage = change.coverImage
+    },
+    updateCardTitleChanged (change) {
+      const cardList = this.cardLists.find(cardList => {
+        return cardList.id === change.cardListId
+      })
+      const card = cardList.cards.find(card => {
+        return card.id === change.cardId
+      })
+      card.title = change.title
     }
   }
 }

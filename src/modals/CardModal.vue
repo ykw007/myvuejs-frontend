@@ -218,7 +218,11 @@ export default {
   methods: {
     changeCardTitle () {
       cardService.changeCardTitle(this.cardId, this.title).then(() => {
-        this.$emit('titleChanged', {cardId: this.cardId, title: this.title})
+        this.$emit('titleChanged', {
+          cardListId: this.cardList.id,
+          cardId: this.cardId,
+          title: this.title
+        })
         $('#cardModal').focus()
       }).catch(error => {
         notify.error(error.message)
