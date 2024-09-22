@@ -1,5 +1,5 @@
 # TaskAgile Front End
-모던 웹 애플리케이션 개발 서적 구입하여 개발 환경 구성하고 jenkins 자동화 빌드 구성.
+모던 웹 애플리케이션 개발 서적 구입하여 개발 환경 구성하고 오라클 클라우드 영구 무료 서버에 jenkins 자동화 빌드 구성.
 
 ![vue테스트사이트](https://github.com/user-attachments/assets/a23c962b-db6d-4f94-93c4-c904a6b844c7)
 
